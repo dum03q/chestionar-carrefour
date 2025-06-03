@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+  <title>Chestionar Carrefour 2025</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #0073e6, #0055aa);
+      color: #fff;
+      padding: 15px;
+      margin: 0;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .container {
+      background: #fff;
+      color: #333;
+      border-radius: 16px;
+      padding: 30px 25px;
+      max-width: 400px;
+      width: 100%;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+      box-sizing: border-box;
+    }
+    h1 {
+      text-align: center;
+      color: #0055aa;
+      margin-bottom: 15px;
+      font-weight: 700;
+      font-size: 1.7rem;
+    }
+    p.info {
+      font-size: 0.9rem;
+      color: #0073e6;
+      text-align: center;
+      margin-bottom: 20px;
+      font-weight: 600;
+    }
+    label {
+      display: block;
+      margin-top: 18px;
+      font-weight: 600;
+      font-size: 1rem;
+    }
+    .option {
+      margin: 8px 0;
+      font-weight: 500;
+    }
+    input[type="text"], textarea, input[type="range"] {
+      width: 100%;
+      padding: 10px 12px;
+      margin-top: 8px;
+      border-radius: 8px;
+      border: 1.8px solid #ccc;
+      font-size: 1rem;
+      resize: vertical;
+      box-sizing: border-box;
+      font-family: inherit;
+    }
+    textarea {
+      min-height: 80px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 15px;
+      font-size: 0.9rem;
+    }
+    th, td {
+      border: 1.5px solid #ccc;
+      padding: 8px 6px;
+      text-align: center;
+      color: #333;
+    }
+    th {
+      background-color: #e0e7ff;
+      color: #0055aa;
+      font-weight: 700;
+    }
+    input[type="radio"], input[type="checkbox"] {
+      transform: scale(1.2);
+      margin-right: 6px;
+      vertical-align: middle;
+      cursor: pointer;
+    }
+    input[type="submit"] {
+      background-color: #0055aa;
+      color: white;
+      border: none;
+      border-radius: 12px;
+      padding: 14px;
+      font-size: 1.2rem;
+      font-weight: 700;
+      cursor: pointer;
+      margin-top: 25px;
+      width: 100%;
+      transition: background-color 0.3s ease;
+      box-shadow: 0 4px 12px rgba(0, 85, 170, 0.6);
+    }
+    input[type="submit"]:hover {
+      background-color: #003f7a;
+      box-shadow: 0 6px 18px rgba(0, 63, 122, 0.8);
+    }
+    #thank-you {
+      display: none;
+      text-align: center;
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: #0a9f0a;
+      animation: fadeInSlide 1s ease-out forwards;
+      margin-top: 25px;
+    }
+    @keyframes fadeInSlide {
+      from {opacity: 0; transform: translateY(30px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Chestionar Carrefour 2025</h1>
+    <p class="info">Completează chestionarul pe telefon pentru o experiență optimă 📱</p>
+
+    <form id="carrefourForm">
+
+      <label>1. Ai cumpărat vreodată din Carrefour?</label>
+      <label class="option"><input type="radio" name="q1" value="da" required> Da</label>
+      <label class="option"><input type="radio" name="q1" value="nu"> Nu</label>
+
+      <label>2. Cât de des mergi la Carrefour?</label>
+      <label class="option"><input type="radio" name="q2" value="saptamanal" required> Săptămânal</label>
+      <label class="option"><input type="radio" name="q2" value="lunar"> Lunar</label>
+      <label class="option"><input type="radio" name="q2" value="foarte rar"> Foarte rar</label>
+
+      <label>3. Ce tipuri de produse cumperi cel mai des?</label>
+      <label class="option"><input type="checkbox" name="produse" value="alimentare"> Alimentare</label>
+      <label class="option"><input type="checkbox" name="produse" value="electrocasnice"> Electrocasnice</label>
+      <label class="option"><input type="checkbox" name="produse" value="imbracaminte"> Îmbrăcăminte</label>
+      <label class="option"><input type="checkbox" name="produse" value="cosmetice"> Cosmetice</label>
+
+      <label>4. Evaluează următoarele aspecte ale Carrefour:</label>
+      <table>
+        <tr>
+          <th>Aspect</th>
+          <th>✘ Slab</th>
+          <th>😐 Acceptabil</th>
+          <th>👍 Bun</th>
+          <th>🔥 Excelent</th>
+        </tr>
+        <tr>
+          <td>Prețuri</td>
+          <td><input type="radio" name="pret" value="1" required></td>
+          <td><input type="radio" name="pret" value="2"></td>
+          <td><input type="radio" name="pret" value="3"></td>
+          <td><input type="radio" name="pret" value="4"></td>
+        </tr>
+        <tr>
+          <td>Curățenie</td>
+          <td><input type="radio" name="curatenie" value="1" required></td>
+          <td><input type="radio" name="curatenie" value="2"></td>
+          <td><input type="radio" name="curatenie" value="3"></td>
+          <td><input type="radio" name="curatenie" value="4"></td>
+        </tr>
+        <tr>
+          <td>Comportamentul angajaților</td>
+          <td><input type="radio" name="staff" value="1" required></td>
+          <td><input type="radio" name="staff" value="2"></td>
+          <td><input type="radio" name="staff" value="3"></td>
+          <td><input type="radio" name="staff" value="4"></td>
+        </tr>
+      </table>
+
+      <label>5. Pe o scară de la 1 la 5, cât de satisfăcut ești de Carrefour?</label>
+      <input type="range" name="satisfactie" min="1" max="5" step="1" value="3" required>
+
+      <label>6. Ce ai schimba sau îmbunătăți la Carrefour?</label>
+      <textarea name="imbunatatiri" placeholder="Scrie răspunsul tău aici..." required></textarea>
+
+      <input type="submit" value="Trimite răspunsurile">
+    </form>
+
+    <div id="thank-you">🎉 Mulțumim că ai completat! Carrefour te pupă pe reducere 💸<br>
+      Pagina se va închide automat în câteva secunde...</div>
+  </div>
+
+  <script>
+    const form = document.getElementById('carrefourForm');
+    const thankYou = document.getElementById('thank-you');
+
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+
+      // Poți adăuga aici trimiterea datelor la server dacă vrei (fetch/ajax)
+
+      form.style.display = 'none';
+      thankYou.style.display = 'block';
+
+      // Timer de 6 secunde după care pagina se închide automat
+      setTimeout(() => {
+        // Dacă e pe telefon, va încerca să închidă tab-ul, dacă nu, doar face redirect la blank
+        if (navigator.userAgent.match(/Android|iPhone|iPad|iPod/i)) {
+          window.close(); // funcționează în browsere care permit închiderea tab-ului deschis de script
+        } else {
+          // Desktop fallback - redirecționează undeva sau blochează închidere
+          window.open('', '_self').close();
+          // Dacă nu merge închiderea, măcar îi zici să închidă manual
+          alert('Poți închide această filă acum.');
+        }
+      }, 6000);
+    });
+  </script>
+</body>
+</html>
